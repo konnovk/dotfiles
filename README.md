@@ -34,3 +34,20 @@ nvim
 ```
 
 On the first launch, `vim.pack` will automatically install the plugins.
+
+### Kitty
+
+Kitty and the **Cascadia Mono NF Light** font are required.
+
+Back up the existing configuration, if present:
+
+```sh
+mv ~/.config/kitty ~/.config/kitty.backup-$(date +%Y%m%d-%H%M%S)
+```
+
+From the repository root, create a symbolic link to the submodule:
+
+```sh
+mkdir -p ~/.config
+ln -s "$(pwd)/dotfiles-kitty" ~/.config/kitty
+```
