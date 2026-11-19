@@ -1,9 +1,0 @@
-[submodule "dotfiles-nvim"]
-	path = dotfiles-nvim
-	url = git@github.com:konnovk/dotfiles-nvim.git
-[submodule "dotfiles-kitty"]
-	path = dotfiles-kitty
-	url = git@github.com:konnovk/dotfiles-kitty.git
-[submodule "dotfiles-tmux"]
-	path = dotfiles-tmux
-	url = git@github.com:konnovk/dotfiles-tmux.git
