@@ -1,3 +1,6 @@
 [submodule "dotfiles-nvim"]
 	path = dotfiles-nvim
 	url = git@github.com:konnovk/dotfiles-nvim.git
+[submodule "dotfiles-kitty"]
+	path = dotfiles-kitty
+	url = git@github.com:konnovk/dotfiles-kitty.git
