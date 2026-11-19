@@ -18,5 +18,8 @@ vim.opt.listchars = {
   nbsp = "␣",
 }
 
+-- Локальная цветовая схема из colors/adwaita.lua
+vim.cmd.colorscheme("adwaita")
+
 -- Устанавливаем лидер-клавишу (пробел)
 vim.g.mapleader = " "

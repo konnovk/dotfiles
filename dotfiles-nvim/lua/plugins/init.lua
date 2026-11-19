@@ -1,6 +1,5 @@
 -- Загрузчик конфигураций плагинов.
 -- Порядок подключения важен: иконки загружаются до зависимых от них плагинов.
-require("plugins.adwaita")
 require("plugins.gitsigns")
 require("plugins.nvim-web-devicons")
 require("plugins.fzf-lua")
@@ -11,4 +10,3 @@ require("plugins.autopairs")
 require("plugins.nvim-treesitter")
 require("plugins.autotag")
 require("plugins.blink-cmp")
-require("plugins.toggleterm")
