@@ -53,10 +53,11 @@ nvim
 ├── init.lua                    # Точка входа: подключает основные модули
 ├── nvim-pack-lock.json         # Lock-файл vim.pack
 ├── README.md                   # Описание конфигурации
+├── colors/
+│   └── adwaita.lua             # Локальная цветовая схема
 ├── after/
 │   └── ftplugin/               # Настройки отступов по типам файлов
 │       ├── go.lua
-│       ├── javascript.lua
 │       ├── markdown.lua
 │       ├── python.lua
 │       ├── rust.lua
@@ -66,7 +67,6 @@ nvim
     ├── main.lua                # Базовые опции и leader-клавиша
     ├── plugins/
     │   ├── init.lua            # Порядок загрузки плагинов
-    │   ├── adwaita.lua         # Цветовая схема
     │   ├── autopairs.lua       # Парные скобки и кавычки
     │   ├── autotag.lua         # Автоматическое закрытие тегов
     │   ├── blink-cmp.lua       # Автодополнение и сниппеты
@@ -76,8 +76,7 @@ nvim
     │   ├── lualine.lua         # Строка состояния
     │   ├── nvim-tree.lua       # Файловый менеджер
     │   ├── nvim-treesitter.lua # Парсеры и подсветка Tree-sitter
-    │   ├── nvim-web-devicons.lua
-    │   └── toggleterm.lua      # Встроенный терминал
+    │   └── nvim-web-devicons.lua
     └── lsp/
         ├── init.lua            # Общие настройки LSP и диагностика
         ├── gopls.lua           # Go
@@ -90,6 +89,7 @@ nvim
 ## Базовые настройки
 
 - Включены номера строк и 24-битные цвета.
+- Используется локальная тёмная цветовая схема `colors/adwaita.lua` на палитре GNOME Adwaita.
 - Буфер обмена Neovim объединён с системным (`unnamedplus`).
 - `<leader>` — пробел.
 - По умолчанию используются отступы шириной 2 пробела, табы заменяются пробелами.
@@ -104,14 +104,13 @@ nvim
 | --- | --- | --- |
 | Go | 4 | Таб |
 | Python, Rust, XML | 4 | Пробелы |
-| JavaScript, Markdown, YAML | 2 | Пробелы |
+| Markdown, YAML | 2 | Пробелы |
 | Остальные | 2 | Пробелы |
 
 ## Плагины
 
 | Плагин | Назначение |
 | --- | --- |
-| [adwaita.nvim](https://github.com/Mofiqul/adwaita.nvim) | Тёмная цветовая схема в стиле GNOME Adwaita с пользовательскими highlight-группами |
 | [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) | Иконки файлов для файлового менеджера и вкладок |
 | [fzf-lua](https://github.com/ibhagwan/fzf-lua) | Нечёткий поиск файлов, текста, буферов и справки |
 | [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua) | Файловый менеджер в боковой панели |
@@ -124,7 +123,6 @@ nvim
 | [blink.cmp](https://github.com/Saghen/blink.cmp) | Автодополнение из LSP, путей, сниппетов и открытых буферов |
 | [LuaSnip](https://github.com/L3MON4D3/LuaSnip) | Движок сниппетов для `blink.cmp` |
 | [friendly-snippets](https://github.com/rafamadriz/friendly-snippets) | Готовая коллекция сниппетов |
-| [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) | Встроенный терминал в отдельной вкладке |
 
 Дополнительно для Go объявлен сниппет `package`, который вставляет объявление пакета с именем `main` по умолчанию.
 
@@ -159,8 +157,6 @@ Go- и Rust-файлы автоматически форматируются п�
 | `<S-l>` | Normal | Перейти к следующему буферу |
 | `<leader>bd` | Normal | Закрыть текущий буфер |
 | `<leader>bo` | Normal | Закрыть остальные буферы |
-| `<leader>t` | Normal | Открыть или скрыть терминал |
-| `<F12>` | Normal, Terminal | Открыть или скрыть терминал |
 
 ### Нечёткий поиск
 
