@@ -76,7 +76,8 @@ nvim
     │   ├── lualine.lua         # Строка состояния
     │   ├── nvim-tree.lua       # Файловый менеджер
     │   ├── nvim-treesitter.lua # Парсеры и подсветка Tree-sitter
-    │   └── nvim-web-devicons.lua
+    │   ├── nvim-web-devicons.lua
+    │   └── which-key.lua         # Подсказки по сочетаниям клавиш
     └── lsp/
         ├── init.lua            # Общие настройки LSP и диагностика
         ├── gopls.lua           # Go
@@ -123,6 +124,7 @@ nvim
 | [blink.cmp](https://github.com/Saghen/blink.cmp) | Автодополнение из LSP, путей, сниппетов и открытых буферов |
 | [LuaSnip](https://github.com/L3MON4D3/LuaSnip) | Движок сниппетов для `blink.cmp` |
 | [friendly-snippets](https://github.com/rafamadriz/friendly-snippets) | Готовая коллекция сниппетов |
+| [which-key.nvim](https://github.com/folke/which-key.nvim) | Всплывающие подсказки по доступным сочетаниям клавиш |
 
 Дополнительно для Go объявлен сниппет `package`, который вставляет объявление пакета с именем `main` по умолчанию.
 
@@ -147,6 +149,8 @@ nvim
 Go- и Rust-файлы автоматически форматируются перед сохранением средствами LSP: `gopls` использует `gofmt`, а `rust-analyzer` — `rustfmt`. Ожидание форматирования ограничено двумя секундами.
 
 ## Горячие клавиши
+
+После нажатия префикса, например `<leader>` или `g`, `which-key.nvim` через 300 мс показывает доступные продолжения сочетаний и их описания.
 
 ### Общие
 
