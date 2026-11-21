@@ -1,5 +1,5 @@
 startgroup
-shaders crt tft
+shaders tft crt
 animation_toggle user:vhs_toggle
 animation_stop never
 endgroup
