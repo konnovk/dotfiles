@@ -51,6 +51,6 @@ require("lualine").setup({
       "filetype",
     },
     lualine_y = { "progress" },
-    lualine_z = { "%S", "location" },
+    lualine_z = { "location" },
   },
 })
